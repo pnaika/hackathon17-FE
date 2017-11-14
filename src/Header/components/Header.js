@@ -15,7 +15,7 @@ export class Header extends Component {
                     <div className="navbar-header">
                         <Link
                             className="navbar-brand header-logo"
-                            to='/see-me'
+                            to='/next-page'
                         >
                             Example Route
                         </Link>

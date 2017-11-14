@@ -30,7 +30,7 @@ const App = () => {
                         />
                         <Route exact
                                strict
-                               path="/see-me"
+                               path="/next-page"
                                component={Dummy}
                         />
                         </Switch>
