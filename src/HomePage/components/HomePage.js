@@ -1,6 +1,8 @@
 import './homepage.scss';
 import React, { Component } from 'react';
 import { Input, Image, Button } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { actions } from '../';
 
 export class HomePage extends Component {
 
@@ -20,7 +22,7 @@ export class HomePage extends Component {
     }
 
     getSearchDetails() {
-        console.log(this.state.searchValue)
+        this.props.getPartDetailsById(this.state.searchValue)
     }
     render() {
         return (
@@ -28,7 +30,7 @@ export class HomePage extends Component {
                 <Image src="../../_app/images/Logo-IV-Vapid.png" size="small" className="logo-size"/>
                 <div className="search-input">
                     <div>Search by Serial Number or Blockchain ID:</div>
-                    <input
+                    <Input
                         placeholder="Search..."
                         className='search-bar'
                         onChange={this.searchSerial}
@@ -40,4 +42,18 @@ export class HomePage extends Component {
     }
 }
 
-export default HomePage;
+function mapStatetoProps(state){
+    return {
+        partDetails: state.partDetails.partDetails
+    }
+}
+
+function mapDispatchtoProps(dispatch) {
+    return {
+        getPartDetailsById: (id) => {
+            dispatch(actions.getPartDetailsById(id));
+        }
+    };
+}
+
+export default connect(mapStatetoProps, mapDispatchtoProps)(HomePage);

@@ -16,8 +16,8 @@ import store from './_app/store';
 
 //components
 import {HomePage} from './HomePage';
-import Dummy from './TestComp';
 import { DataBlock } from './DataBlock';
+import { PartDetails } from './PartDetails';
 import {Main} from './Main';
 
 const App = () => {
@@ -34,13 +34,13 @@ const App = () => {
                         <Switch>
                             <Route exact
                                    strict
-                                   path="/next-page"
-                                   component={Dummy}
+                                   path="/data-block"
+                                   component={DataBlock}
                             />
                             <Route exact
                                    strict
-                                   path="/data-block"
-                                   component={DataBlock}
+                                   path="/part-details/:id"
+                                   component={PartDetails}
                             />
                         </Switch>
                     </AuthenticatedRoutesWrapper>

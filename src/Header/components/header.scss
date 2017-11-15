@@ -6,7 +6,6 @@
 
 .navbar-header {
   width: 100%;
-  height: 50px;
   background-color: transparent;
   box-shadow: none;
 }
@@ -16,16 +15,23 @@
   padding: ($navbar-height - $navbar-menu-height)/2 0;
 }
 
+.navbar-fixed-bottom, .navbar-fixed-top {
+  position: relative !important;
+}
+
 .navbar > .container-fluid {
   .navbar-brand.header-logo {
-    padding: ($navbar-height - $navbar-logo-height)/2 0;
     margin: 0 25px;
-    color: white;
+    width:  104px  !important;
+    top: -14px;
 
     svg {
       height: $navbar-logo-height;
       fill: $gray-lighter;
     }
+  }
+  .block-header {
+    color: $gray;
   }
 }
 
@@ -33,59 +39,4 @@
   float: left;
   padding: ($navbar-height - $navbar-breadcrumbs-height)/2 0;
   line-height: $navbar-breadcrumbs-height;
-}
-
-.header-dealer {
-  display: inline-block;
-  color: $gray-lighter;
-  padding: ($navbar-height - $navbar-dealer-height)/2 0;
-  margin: 0;
-
-  span {
-    margin-right: 8px;
-    line-height: $navbar-dealer-height;
-  }
-
-  &.select-dropdown:before {
-    top: ($navbar-height - 4px) /2;
-  }
-
-  select {
-    display: inline-block;
-    width: initial;
-    padding-right: 36px;
-    font-size: 12px;
-  }
-}
-
-.header-icons-container {
-  padding-left: 30px;
-
-  & > li > a {
-    position: relative;
-    display: block;
-    padding: 0;
-    margin: ($navbar-height - $navbar-icon-height)/2 10px;
-    height: $navbar-icon-height;
-    width: $navbar-icon-height;
-
-    &:hover {
-      background-color: transparent;
-    }
-
-    & > .header-icon {
-      padding: 5px;
-      height: 100%;
-      width: 100%;
-      fill: $gray-light;
-      border-radius: 50%;
-      background-color: transparent;
-      transition: background-color .2s;
-
-      &:hover {
-        cursor: pointer;
-        background-color: $gray-lighter;
-      }
-    }
-  }
 }
