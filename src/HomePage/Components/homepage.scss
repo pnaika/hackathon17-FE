@@ -1,0 +1,30 @@
+.home-page {
+  .logo-size {
+    width: 13% !important;
+    margin-top: 16%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .search-input {
+    margin: 3% auto;
+    font-size: 26px;
+    color: darkgrey;
+    display: table;
+  }
+
+  .search-bar {
+    margin: 3%;
+  }
+
+  .go-button {
+    border: maroon;
+    background-color: maroon;
+    border-radius: 0;
+    font-size: 28px;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+  }
+}

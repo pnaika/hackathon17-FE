@@ -30,4 +30,4 @@ AuthenticatedRoutesWrapper.propTypes = {
 };
 
 
-export default AuthenticatedRoutesWrapper
+export default AuthenticatedRoutesWrapper;

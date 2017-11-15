@@ -1,10 +1,13 @@
+// styles
+import './_app/styles/index.scss';
+
 // dependencies
 import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
 
 // routes
-import { Router, Route, Switch, Redirect } from 'react-router-dom';
+import {Router, Route, Switch, Redirect} from 'react-router-dom';
 import history from './_app/history';
 import AuthenticatedRoutesWrapper from './Auth/AuthenticatedRoutesWrapper';
 
@@ -12,27 +15,27 @@ import AuthenticatedRoutesWrapper from './Auth/AuthenticatedRoutesWrapper';
 import store from './_app/store';
 
 //components
-import { HomePage } from './HomePage';
+import {HomePage} from './HomePage';
 import Dummy from './TestComp';
-import { Main } from './Main';
+import {Main} from './Main';
 
 const App = () => {
     return (
         <Provider store={store}>
             <Router history={history}>
                 <Switch>
+                    <Route exact
+                           strict
+                           path="/"
+                           component={HomePage}
+                    />
                     <AuthenticatedRoutesWrapper shellComponent={Main}>
                         <Switch>
-                        <Route exact
-                               strict
-                               path="/"
-                               component={HomePage}
-                        />
-                        <Route exact
-                               strict
-                               path="/next-page"
-                               component={Dummy}
-                        />
+                            <Route exact
+                                   strict
+                                   path="/next-page"
+                                   component={Dummy}
+                            />
                         </Switch>
                     </AuthenticatedRoutesWrapper>
                 </Switch>
