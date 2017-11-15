@@ -1,6 +1,2 @@
-
-// Menu actionTypes
-export const SET_SIDE_MENU = 'SET_SIDE_MENU';
-export const INCREMENT_LOADING_COUNT = 'INCREMENT_LOADING_COUNT';
-export const DECREMENT_LOADING_COUNT = 'DECREMENT_LOADING_COUNT';
-export const RESET_LOADING_COUNT = 'RESET_LOADING_COUNT';
+// BlockData actionType
+export const SET_BLOCK_DATA = 'SET_BLOCK_DATA';

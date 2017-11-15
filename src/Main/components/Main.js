@@ -12,7 +12,7 @@ export const Main = ({ children }) => {
                 <title>Chain Smokers</title>
                 <meta name="description" content="Chain Smokers" />
             </Helmet>
-            <Header />
+            {/*<Header />*/}
             <div className="row">
                 <div className="col-xs-12 main-content">
                     <div className="main-content-page">

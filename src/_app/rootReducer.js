@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import { reducer as main } from '../Main';
+import { reducer as blockData } from '../DataBlock';
 
 export default combineReducers({
-    main
+    blockData
 });

@@ -17,6 +17,7 @@ import store from './_app/store';
 //components
 import {HomePage} from './HomePage';
 import Dummy from './TestComp';
+import { DataBlock } from './DataBlock';
 import {Main} from './Main';
 
 const App = () => {
@@ -35,6 +36,11 @@ const App = () => {
                                    strict
                                    path="/next-page"
                                    component={Dummy}
+                            />
+                            <Route exact
+                                   strict
+                                   path="/data-block"
+                                   component={DataBlock}
                             />
                         </Switch>
                     </AuthenticatedRoutesWrapper>
